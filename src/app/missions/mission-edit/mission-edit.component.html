@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="col-sm-6">
+    <h4 style="margin: 20px;" *ngIf="mission">{{mission.name}}</h4>
+  </div>
+  <div class="col-sm-6">
+    <button type="button" class="btn btn-success" style="margin: 20px; float: right" (click)="onSubmit()" [disabled]="!missionForm.valid">Save</button>
+    <button type="button" class="btn btn-default" style="margin: 20px; float: right" (click)="onCancel()">Cancel</button>
+  </div>
+</div>
+
+<div class="row">
+  <hr>
+</div>
+
+<div class="row">
+  <div class="container-fluid">
+    <form [formGroup]="missionForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              formControlName="name"
+              class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="launchDate">Launch date</label>
+            <input
+              type="text"
+              id="launchDate"
+              formControlName="launchDate"
+              class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="notes">Short notes</label>
+            <input
+              type="text"
+              id="notes"
+              formControlName="notes"
+              class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="status">Status</label>
+            <input
+              type="text"
+              id="status"
+              formControlName="status"
+              class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              type="text"
+              id="description"
+              class="form-control"
+              formControlName="description"
+              rows="6"></textarea>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

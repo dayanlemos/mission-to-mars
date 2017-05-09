@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+hr{
+  margin: 0;
+  border-width: 2px;
+}
+.btn{
+  min-width:112px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}

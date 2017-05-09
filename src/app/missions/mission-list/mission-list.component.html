@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-12">
+    <button type="button" class="btn btn-primary" style="margin: 20px; float: right" (click)="onNewMission()">Add New</button>
+  </div>
+</div>
+
+<div class="row">
+  <hr>
+</div>
+
+<div class="row">
+
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>Mission</th>
+      <th>Launch date</th>
+      <th>Notes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let mission of missions" class="cursor-pointer" [routerLink]="mission.id" routerLinkActive="active">
+      <td>{{mission.name}}</td>
+      <td>{{mission.launchDate}}</td>
+      <td>{{mission.notes}}</td>
+    </tr>
+    </tbody>
+
+  </table>
+  <div *ngIf="selectedMission">
+    {{selectedMission.name}}
+  </div>
+</div>
